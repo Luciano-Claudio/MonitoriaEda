@@ -3,5 +3,4 @@ public interface Pilha_IF {
 	public Integer pop() throws Exception;
 	public Integer top() throws Exception;
 	public boolean isEmpty();
-	public boolean isFull();
 }

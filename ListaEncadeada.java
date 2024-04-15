@@ -1,5 +1,6 @@
 public class ListaEncadeada implements ListaEncadeada_IF {
 
+    private ListaEncadeada head;
     private ListaEncadeada next;
     private Integer value;
 
@@ -73,21 +74,6 @@ public class ListaEncadeada implements ListaEncadeada_IF {
                 next.remove(element);
             }
         }
-    }
-
-    @Override
-    public int[] toArray() {
-        int tam = size();
-        int[] array = new int[tam];
-
-        toArrayRecursivo(this, array, 0);
-
-        return array;
-    }
-    public void toArrayRecursivo(ListaEncadeada lista, int[] array, int inicio){
-        if(lista.isEmpty()) return;
-        array[inicio] = lista.value;
-        toArrayRecursivo(lista.next, array, ++inicio);
     }
 
     public boolean isNil(){
